@@ -113,6 +113,83 @@ img {
   text-align: center;
 }
 
+/* コンテンツ導入部分 */
+.brand {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: var(--v-space);
+  text-align: center;
+}
+
+.brand-mission {
+  margin-bottom: 20px;
+}
+
+/*矢印が右に移動する*/
+.btnarrow4{
+  /*矢印と下線の基点とするためrelativeを指定*/
+position: relative;
+  /*形状*/
+  display: inline-block;
+padding: 0 20px;
+  color: #333;
+  text-decoration: none;
+  outline: none;
+}
+
+.btnarrow4 {
+  margin-top: 20px;
+  font-family: fantasy;
+}
+
+/*矢印と下線の形状*/
+.btnarrow4::before{
+  content: '';
+  /*絶対配置で下線の位置を決める*/
+position: absolute;
+  bottom:1px;
+  left:15%;
+  /*下線の形状*/    
+  width: 85%;
+  height: 1px;
+background:#333;
+  /*アニメーションの指定*/
+  transition: all .3s;
+}
+
+.btnarrow4::after{
+  content: '';
+  /*絶対配置で矢印の位置を決める*/
+position: absolute;
+  bottom:5px;
+  right:0;
+  /*矢印の形状*/    
+  width: 15px;
+  height:1px;
+background:#333;
+  transform: rotate(35deg);
+  /*アニメーションの指定*/
+  transition: all .3s;
+}
+
+/*hoverした際の移動*/
+.btnarrow4:hover::before{
+  left:20%;
+}
+
+.btnarrow4:hover::after{
+  right:-5%;
+}
+
+
+
+/* コンテンツ */
+.content-wrap {
+  margin-top: -50px;
+  margin-bottom: 50px;
+}
+
 /* 画像とテキスト */
 .imgtext {
   padding: var(--v-space)0;
@@ -125,6 +202,7 @@ img {
 
 .imgtext img {
   margin-top: -20px;
+  position: relative;
 }
 
 .imgtext + .imgtext {
@@ -135,7 +213,7 @@ img {
 .heading-decoration {
   font-size: clamp(30px, 3vw, 40px);
   min-height: 0vw;
-  font-weight: 400;
+  font-weight: bold;
 }
 
 .heading-decoration::after {
