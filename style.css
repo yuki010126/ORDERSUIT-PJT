@@ -147,13 +147,13 @@ padding: 0 20px;
 .btnarrow4::before{
   content: '';
   /*絶対配置で下線の位置を決める*/
-position: absolute;
+  position: absolute;
   bottom:1px;
   left:15%;
   /*下線の形状*/    
   width: 85%;
   height: 1px;
-background:#333;
+  background:#333;
   /*アニメーションの指定*/
   transition: all .3s;
 }
@@ -161,13 +161,13 @@ background:#333;
 .btnarrow4::after{
   content: '';
   /*絶対配置で矢印の位置を決める*/
-position: absolute;
+  position: absolute;
   bottom:5px;
   right:0;
   /*矢印の形状*/    
   width: 15px;
   height:1px;
-background:#333;
+  background:#333;
   transform: rotate(35deg);
   /*アニメーションの指定*/
   transition: all .3s;
@@ -181,8 +181,6 @@ background:#333;
 .btnarrow4:hover::after{
   right:-5%;
 }
-
-
 
 /* コンテンツ */
 .content-wrap {
@@ -253,7 +251,7 @@ background:#333;
 
 /* ギャラリーパーツの見出し */
 .heading {
-  font-size: clamp(40px, 5.2vw, 70px);
+  font-size: clamp(35px, 5.2vw, 50px);
   min-height: 0vw;
   font-weight: bold;
   position: absolute;
@@ -315,7 +313,6 @@ background:#333;
 
 .entry .w-container {
   max-width: 720px;
-  background-color: aqua;
 }
 
 .entry .heading-decoration {
@@ -339,9 +336,60 @@ background:#333;
   margin-bottom: 1.5em;
 }
 
+/* サービスプラン */
+.slant-bg {
+  width: 100%;
+  height: 100%;
+  margin-top: -270px;
+  padding: 170px 0;
+  clip-path: polygon(0 calc(0% + 7vw), 100% 0, 100% calc(100% - 7vw), 0 100%);
+  background-color: #ececec;
+}
+
+.plans {
+  margin-top: 200px;
+}
+
+.service0 {
+  font-size: clamp(30px, 6.25vw, 48px);
+  display: grid;
+  margin-top: -80px;
+}
+
+.service0 span {
+  font-size: 18px;
+  padding-bottom: 60px;
+}
+
+.plans-container {
+  display: grid;
+  gap: 30px
+}
+
+.plan {
+  padding: 70px 27px;
+  background-color: #ffffff;
+}
+
+.plan h3 {
+  font-size: 35px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.plan .desc {
+  margin-bottom: 38px;
+}
+
+.plan .price {
+  margin-bottom: 22px;
+  font-size: 18px;
+  font-weight: bold;
+}
 
 /* 以下、フッター */
 .footer {
+  margin-top: 50px;
   padding: 70px 0;
   background-color: #000000;
   color: #ffffff;
@@ -387,7 +435,6 @@ background:#333;
   gap: 20px;
 }
 
-
 @media (min-width: 768px) {
   .imgtext-container {
     flex-direction: row;
@@ -424,6 +471,14 @@ background:#333;
     }
   }
 
+  .plans-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .service0 {
+    margin-top: -10px;
+  }
+
   .footer-container {
     grid-template-columns: auto auto;
     grid-template-rows: auto auto auto;
@@ -444,11 +499,6 @@ background:#333;
     justify-self: end;
     align-self: center;
   }
-
-
-
-
-
 
 }
 
