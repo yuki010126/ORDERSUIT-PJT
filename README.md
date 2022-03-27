@@ -5,7 +5,7 @@
 4月下旬リリース予定
 
 ## 成果物
-WEBサイトは<a></a><br>
+WEBサイトは<a>こちらへ</a><br>
 
 ## 開発環境
 - 言語：HTML,CSS,JavaScript(jQuery),php
